@@ -1,0 +1,91 @@
+<main class="signup-page">
+    <div class="signup-content">
+        <div class="signup-error" id="signup-error">
+            {{#if hasErrors}}
+                <p class="error">
+                    {{error}}
+                </p>
+            {{/if}}
+        </div>
+
+        <form action="/register" method="post" id="registration-form" class="signup-form">
+            <h1 class="signup-title"> Welcome to Entrepôt </h1>
+
+            <label for="register-usernameInput">username</label>
+            <input
+                    type="text"
+                    id="register-usernameInput"
+                    name="usernameInput"
+                    placeholder="username"
+                    required/>
+
+            <label for="register-emailInput">E-mail</label>
+            <input
+                    name="emailInput"
+                    id="register-emailInput"
+                    placeholder="email"
+                    required/>
+
+            <label for="register-passwordInput">password</label>
+            <input
+                    type="password"
+                    id="register-passwordInput"
+                    name="passwordInput"
+                    placeholder="password"
+                    required/>
+
+
+            <button type="submit">Submit</button>
+            <br>
+            <a href="/login" class="login-link" aria-label="click to login">Click here to log-in!</a>
+        </form>
+    </div>
+        
+</main>
+
+
+
+
+{{!-- <h1>{{title}}</h1>
+
+
+<main>
+
+    {{#if hasErrors}}
+        <p class="error">
+            {{error}}
+        </p>
+    {{/if}}
+
+    <form action="/register" method="post" id="registration-form">
+
+        <label for="usernameInput">
+            username:
+        </label>
+        <input id="usernameInput" name="usernameInput"/>
+
+        <br>
+
+        <label for="emailInput">
+            E-mail:
+        </label>
+        <input id="emailInput" name="emailInput"/>
+
+        <br>
+
+        <label for="passwordInput">
+            password:
+        </label>
+        <input id="passwordInput" name="passwordInput" type="password"/>
+
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <br>
+    <br>
+
+    <a href="/login">Already have an account? Click here to log-in!</a>
+
+</main> --}}

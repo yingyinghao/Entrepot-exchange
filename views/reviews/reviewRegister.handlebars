@@ -1,0 +1,43 @@
+
+<main class="main">
+    <div class="container">
+        <div id="reviewRegister-error">
+            {{#if hasError}}
+                <p class="error">
+                    {{error}}
+                </p>
+            {{/if}}
+        </div>
+
+        <div class="title">
+            <h2>Review Card</h2>
+            <div class="underline"></div>
+        </div>
+
+        <div class="review">
+            <!--    here posterId should be got from poster profile url        -->
+            <form action="/review/addReview/{{username}}" method="post" id="reviewRegister-form">
+                <label for="reviewRegister-titleInput">
+                    Title:
+                </label>
+                <input id="reviewRegister-titleInput" name="titleInput"/>
+
+                <label for="reviewRegister-ratingInput">
+                    Rating:
+                </label>
+                <input id="reviewRegister-ratingInput" name="ratingInput" type="text"/>
+
+                <label for="reviewRegister-bodyInput">
+                    Description:
+                </label>
+                <textarea id="reviewRegister-bodyInput" name="bodyInput" rows="5"></textarea>
+
+                <br>
+
+                <button class="button-4" id="reviewRegister-button" type="submit">Submit</button>
+
+            </form>
+        </div>
+    </div>
+
+</main>

@@ -1,0 +1,36 @@
+<main class="userUpdate-page">
+        <div class="container">
+            <div class="userUpdate-error" id="userUpdate-error">
+                {{# if hasErrors}}
+                    <p>{{error}}</p>
+                {{/if}}
+            </div>
+
+            <div class="title">
+                <h2>Update User Info</h2>
+                <div class="underline"></div>
+            </div>
+
+            <form class="userUpdate-content" action="/user/update" method="post" id="userUpdate-form">
+                <input name = '_method' value="PUT" hidden/>
+
+                <label for="userUpdate-usernameInput">Username:</label>
+                <input class="form-control" id="userUpdate-usernameInput" name="usernameInput" type="text" placeholder="{{username}}">
+
+                <label for="userUpdate-emailInput">Email:</label>
+                <input class="form-control" id="userUpdate-emailInput" name="emailInput" type="text" placeholder="{{email}}">
+
+                <label for="originPasswordInput">Old Password:</label>
+                <input class="form-control" id="originPasswordInput" name="originPasswordInput" type="password" >
+
+                <label for="newPasswordInput">New Password:</label>
+                <input class="form-control" id="newPasswordInput" name="newPasswordInput" type="password" >
+
+                <br>
+                <button type="submit" class="button-4" style="margin-right: 30px">Submit</button>
+                <a href="/user/profile" class="button-4">Cancel</a>
+
+            </form>
+
+        </div>
+</main>

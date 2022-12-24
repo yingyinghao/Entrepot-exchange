@@ -1,0 +1,38 @@
+
+
+<main class="login-page">
+    <div class="login-content">
+        <div class="login-error" id="login-error">
+            {{#if hasErrors}}
+                <p>
+                    {{error}}
+                </p>
+            {{/if}}
+        </div>
+
+        <form action="/login" method="post" id="login-form" class="login-form">
+            <h1 class="login-title">Welcome to Entrepôt</h1>
+
+            <label for="login-usernameInput" >username</label>
+            <input
+            type="text"
+            id="login-usernameInput"
+            name="usernameInput"
+            placeholder="username"
+            required/>
+
+            <label for="login-passwordInput" >password</label>
+            <input
+            type="password"
+            id="login-passwordInput"
+            name="passwordInput"
+            placeholder="password"
+            required/>
+
+            <button type="submit" id="login-button">Submit</button>
+            <br>
+            <a href="/register" class="signup-link" aria-label="click to sign up">Click here to register!</a>
+
+        </form>
+    </div>
+</main>
